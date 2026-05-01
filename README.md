@@ -1,4 +1,5 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=220&section=header&text=🎯%20CARA%20Classifier&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Career%20Alignment%20%26%20Recommendation%20Algorithm%20for%20Healthcare%20Graduates&descAlignY=58&descSize=16&descColor=ccccff" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0f0c29,50:302b63,100:24243e&amp;height=220&amp;section=header&amp;text=CARA%20Classifier&amp;fontSize=52&amp;fontColor=ffffff&amp;animation=fadeIn&amp;fontAlignY=38&amp;desc=Career%20Alignment%20%26%20Recommendation%20Algorithm%20for%20Healthcare%20Graduates&amp;descAlignY=58&amp;descSize=16&amp;descColor=ccccff" width="100%"/>
+</br>
 
 <div align="center">
 
