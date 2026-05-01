@@ -1,0 +1,12 @@
+{
+  "id": "Sample_FreshGrad_01",
+  "degree": "BDS",
+  "university": "Maharashtra University of Health Sciences",
+  "gpa": null,
+  "year": null,
+  "subjects": ["anatomy", "physiology", "biochemistry", "pathology", "pharmacology", "community medicine", "oral medicine", "dental surgery"],
+  "experience_years": 0,
+  "experience_roles": [],
+  "strengths": ["Judgment", "Leadership", "Perspective", "Honesty", "Social Intelligence"],
+  "sop": "wants to transition from clinical to administrative leadership; interested in organizational leadership and quality improvement at a large healthcare organization"
+}

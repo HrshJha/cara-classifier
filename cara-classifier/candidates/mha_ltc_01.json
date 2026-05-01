@@ -1,0 +1,12 @@
+{
+  "id": "Sample_MHA_LTC_01",
+  "degree": "BSc Nursing",
+  "university": "AIIMS Delhi",
+  "gpa": 3.8,
+  "year": 2019,
+  "subjects": ["anatomy", "physiology", "geriatric nursing", "community health nursing", "mental health nursing", "pharmacology", "nursing administration"],
+  "experience_years": 4,
+  "experience_roles": ["2 years general ward", "2 years geriatric unit at Apollo Hospitals"],
+  "strengths": ["Kindness", "Perspective", "Leadership", "Teamwork", "Gratitude"],
+  "sop": "wants to move from bedside nursing into managing long-term care facilities; interested in memory care program design and quality improvement for aging populations"
+}

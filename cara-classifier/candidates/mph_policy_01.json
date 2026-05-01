@@ -1,0 +1,12 @@
+{
+  "id": "Sample_MPH_Policy_01",
+  "degree": "BA Political Science",
+  "university": "St. Xavier's College Mumbai",
+  "gpa": 3.4,
+  "year": 2023,
+  "subjects": ["indian politics", "public policy", "constitutional law", "international relations", "political philosophy", "public administration"],
+  "experience_years": 0,
+  "experience_roles": ["3-month internship at a health policy think tank"],
+  "strengths": ["Leadership", "Perspective", "Judgment", "Social Intelligence", "Fairness"],
+  "sop": "passionate about using policy levers to improve healthcare access; inspired by Ayushman Bharat scheme; wants to work in government health policy or advocacy; long-term goal: shape national health legislation"
+}

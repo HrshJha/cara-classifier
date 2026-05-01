@@ -1,0 +1,170 @@
+[
+  {
+    "candidate_id": "Sample_FreshGrad_01",
+    "recommended_degree": "MHA",
+    "degree_rationale": "Academic clusters most strongly support MPH and MSHI. Top-ranked track T01 has MHA as primary degree. Combined signal points to MHA.",
+    "top_3_tracks": [
+      {
+        "rank": 1,
+        "track_id": "T01",
+        "track_name": "Healthcare Administration, Operations, Quality & Risk",
+        "score": 0.2429,
+        "rationale": "SOP keywords matched: 'leadership', 'quality improvement', 'organizational', 'administrative'. Academic background supports MHA (degree alignment score: 0.5)."
+      },
+      {
+        "rank": 2,
+        "track_id": "T04",
+        "track_name": "Behavioral Health & Human Services Management",
+        "score": 0.2,
+        "rationale": "No direct SOP keyword match. Academic background supports MPH (degree alignment score: 1.0)."
+      },
+      {
+        "rank": 3,
+        "track_id": "T05",
+        "track_name": "Public, Community & Global Health Programs",
+        "score": 0.2,
+        "rationale": "No direct SOP keyword match. Academic background supports MPH (degree alignment score: 1.0)."
+      }
+    ]
+  },
+  {
+    "candidate_id": "Sample_MBA_Finance_01",
+    "recommended_degree": "MBA-HC",
+    "degree_rationale": "Academic clusters most strongly support MHA and MBA-HC. Top-ranked track T03 has MBA-HC as primary degree. Combined signal points to MBA-HC.",
+    "top_3_tracks": [
+      {
+        "rank": 1,
+        "track_id": "T03",
+        "track_name": "Healthcare Finance, Payer Strategy & Value-Based Care",
+        "score": 0.4085,
+        "rationale": "SOP keywords matched: 'cfo', 'revenue cycle', 'payer', 'capital', 'contracting'. Experience keywords matched: 'audit'. Academic background supports MBA-HC (degree alignment score: 1.0)."
+      },
+      {
+        "rank": 2,
+        "track_id": "T02",
+        "track_name": "Healthcare Consulting & Advisory",
+        "score": 0.2667,
+        "rationale": "No direct SOP keyword match. Experience keywords matched: 'associate', 'deloitte'. Academic background supports MBA-HC (degree alignment score: 1.0)."
+      },
+      {
+        "rank": 3,
+        "track_id": "T01",
+        "track_name": "Healthcare Administration, Operations, Quality & Risk",
+        "score": 0.2,
+        "rationale": "No direct SOP keyword match. Academic background supports MHA (degree alignment score: 1.0)."
+      }
+    ]
+  },
+  {
+    "candidate_id": "Sample_MHA_LTC_01",
+    "recommended_degree": "MHA",
+    "degree_rationale": "Academic clusters most strongly support MPH and MSHI. Top-ranked track T01 has MHA as primary degree. Combined signal points to MHA.",
+    "top_3_tracks": [
+      {
+        "rank": 1,
+        "track_id": "T01",
+        "track_name": "Healthcare Administration, Operations, Quality & Risk",
+        "score": 0.2161,
+        "rationale": "SOP keywords matched: 'quality improvement'. Experience keywords matched: 'hospital'. Academic background supports MHA (degree alignment score: 0.71)."
+      },
+      {
+        "rank": 2,
+        "track_id": "T04",
+        "track_name": "Behavioral Health & Human Services Management",
+        "score": 0.2,
+        "rationale": "No direct SOP keyword match. Academic background supports MPH (degree alignment score: 1.0)."
+      },
+      {
+        "rank": 3,
+        "track_id": "T05",
+        "track_name": "Public, Community & Global Health Programs",
+        "score": 0.2,
+        "rationale": "No direct SOP keyword match. Academic background supports MPH (degree alignment score: 1.0)."
+      }
+    ]
+  },
+  {
+    "candidate_id": "Sample_MPH_Community_01",
+    "recommended_degree": "MPH",
+    "degree_rationale": "Academic clusters most strongly support MHA and MPH. Top-ranked track T05 has MPH as primary degree. Combined signal points to MPH.",
+    "top_3_tracks": [
+      {
+        "rank": 1,
+        "track_id": "T05",
+        "track_name": "Public, Community & Global Health Programs",
+        "score": 0.4536,
+        "rationale": "SOP keywords matched: 'community health', 'health equity', 'social determinants'. Experience keywords matched: 'community', 'outreach', 'ngo'. Academic background supports MPH (degree alignment score: 1.0)."
+      },
+      {
+        "rank": 2,
+        "track_id": "T01",
+        "track_name": "Healthcare Administration, Operations, Quality & Risk",
+        "score": 0.2,
+        "rationale": "No direct SOP keyword match. Academic background supports MHA (degree alignment score: 1.0)."
+      },
+      {
+        "rank": 3,
+        "track_id": "T04",
+        "track_name": "Behavioral Health & Human Services Management",
+        "score": 0.2,
+        "rationale": "No direct SOP keyword match. Academic background supports MPH (degree alignment score: 1.0)."
+      }
+    ]
+  },
+  {
+    "candidate_id": "Sample_MPH_Policy_01",
+    "recommended_degree": "MPH",
+    "degree_rationale": "Academic clusters most strongly support MHA and MPH. Top-ranked track T07 has MPH as primary degree. Combined signal points to MPH.",
+    "top_3_tracks": [
+      {
+        "rank": 1,
+        "track_id": "T07",
+        "track_name": "Health Policy, Economics & Advocacy",
+        "score": 0.475,
+        "rationale": "SOP keywords matched: 'policy', 'legislation', 'advocacy', 'government', 'ayushman', 'national health'. Experience keywords matched: 'policy', 'think tank'. Academic background supports MPH (degree alignment score: 1.0)."
+      },
+      {
+        "rank": 2,
+        "track_id": "T01",
+        "track_name": "Healthcare Administration, Operations, Quality & Risk",
+        "score": 0.2,
+        "rationale": "No direct SOP keyword match. Academic background supports MHA (degree alignment score: 1.0)."
+      },
+      {
+        "rank": 3,
+        "track_id": "T04",
+        "track_name": "Behavioral Health & Human Services Management",
+        "score": 0.2,
+        "rationale": "No direct SOP keyword match. Academic background supports MPH (degree alignment score: 1.0)."
+      }
+    ]
+  },
+  {
+    "candidate_id": "Sample_MSHI_Tech_01",
+    "recommended_degree": "MSHI",
+    "degree_rationale": "Academic clusters most strongly support MSHI and MBA-HC. Top-ranked track T09 has MSHI as primary degree. Combined signal points to MSHI.",
+    "top_3_tracks": [
+      {
+        "rank": 1,
+        "track_id": "T09",
+        "track_name": "Digital Health, Informatics & Data Governance",
+        "score": 0.4643,
+        "rationale": "SOP keywords matched: 'ehr', 'informatics', 'fhir', 'interoperability', 'clinical decision support', 'health informatics'. Experience keywords matched: 'ehr', 'software developer'. Academic background supports MSHI (degree alignment score: 1.0)."
+      },
+      {
+        "rank": 2,
+        "track_id": "T11",
+        "track_name": "Healthcare Entrepreneurship, Product & Innovation",
+        "score": 0.2429,
+        "rationale": "No direct SOP keyword match. Experience keywords matched: 'startup'. Academic background supports MBA-HC (degree alignment score: 1.0)."
+      },
+      {
+        "rank": 3,
+        "track_id": "T02",
+        "track_name": "Healthcare Consulting & Advisory",
+        "score": 0.2,
+        "rationale": "No direct SOP keyword match. Academic background supports MBA-HC (degree alignment score: 1.0)."
+      }
+    ]
+  }
+]

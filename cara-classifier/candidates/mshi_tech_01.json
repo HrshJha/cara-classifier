@@ -1,0 +1,13 @@
+{
+  "id": "Sample_MSHI_Tech_01",
+  "degree": "BTech Computer Science",
+  "university": "VIT Vellore",
+  "gpa": 3.6,
+  "year": 2021,
+  "subjects": ["data structures", "algorithms", "database systems", "python", "java", "machine learning", "cloud computing"],
+  "experience_years": 2,
+  "experience_roles": ["Software Developer at a health-tech startup, EHR integration"],
+  "certifications": ["AWS Cloud Practitioner"],
+  "strengths": ["Curiosity", "Judgment", "Love of Learning", "Creativity", "Perseverance"],
+  "sop": "wants to bridge clinical workflows with technology; interested in EHR optimization, FHIR interoperability, and clinical decision support; long-term goal: Director of Health Informatics"
+}

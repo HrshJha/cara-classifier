@@ -1,0 +1,12 @@
+{
+  "id": "Sample_MPH_Community_01",
+  "degree": "BA Sociology",
+  "university": "University of Mumbai",
+  "gpa": 3.5,
+  "year": 2022,
+  "subjects": ["sociology", "community development", "social research methods", "health & society", "cultural anthropology", "gender studies"],
+  "experience_years": 1,
+  "experience_roles": ["Community Outreach Coordinator at a rural health NGO"],
+  "strengths": ["Kindness", "Social Intelligence", "Teamwork", "Fairness", "Perspective"],
+  "sop": "wants to design community health programs addressing social determinants; long-term goal to lead health equity programs at a state health department"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "Sample_MBA_Finance_01",
+  "degree": "BCom Accounting & Finance",
+  "university": "Symbiosis International",
+  "gpa": 3.7,
+  "year": 2020,
+  "subjects": ["financial accounting", "corporate finance", "cost accounting", "business law", "economics", "taxation", "auditing"],
+  "experience_years": 3,
+  "experience_roles": ["Senior Associate Healthcare Audit at Deloitte India"],
+  "certifications": ["CPA US Candidate"],
+  "strengths": ["Judgment", "Prudence", "Honesty", "Perseverance", "Self-Regulation"],
+  "sop": "wants to move into healthcare CFO track; interested in revenue cycle optimization, payer contracting, and capital allocation"
+}
