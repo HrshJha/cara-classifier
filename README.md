@@ -1,4 +1,5 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=220&section=header&text=🎯%20CARA%20Classifier&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Career%20Alignment%20%26%20Recommendation%20Algorithm%20for%20Healthcare%20Graduates&descAlignY=58&descSize=16&descColor=ccccff" width="100%"/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=220&section=header&text=CARA%20Classifier&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Career%20Alignment%20%26%20Recommendation%20Algorithm%20for%20Healthcare%20Graduates&descAlignY=58&descSize=16&descColor=ccccff" width="100%"/>
 
 <div align="center">
 
@@ -29,7 +30,7 @@
 Healthcare graduates from diverse backgrounds — dentistry, nursing, computer science, sociology — struggle to identify which advanced degree (MHA, MPH, MSHI, MBA-HC) and career track aligns with their unique combination of academic training, professional experience, and career aspirations.
 
 ```
-    Career counselor intuition → Generic advice → Mismatched degree → Wasted tuition + lost momentum
+Career counselor intuition → Generic advice → Mismatched degree → Wasted tuition + lost momentum
 ```
 
 | Failure Type | Symptoms | Impact |
@@ -46,20 +47,20 @@ Healthcare graduates from diverse backgrounds — dentistry, nursing, computer s
 
 ## 💡 The Solution
 
-CARA (Career Alignment & Recommendation Algorithm) is a rule-based classification engine that evaluates three signals — SOP keywords (50%), experience keywords (30%), and academic cluster alignment (20%) — to produce explainable degree and track recommendations.
+CARA (Career Alignment and Recommendation Algorithm) is a rule-based classification engine that evaluates three signals — SOP keywords (50%), experience keywords (30%), and academic cluster alignment (20%) — to produce explainable degree and track recommendations.
 
 ```
-    "wants to transition from clinical to administrative leadership"
-                        ↓ keyword extraction
-         ┌────────────────────────────────────────┐
-         │  leadership → T01 (Admin track)        │  ← ✅ Primary signal
-         │  quality improvement → T01             │  ← ✅ Reinforcing
-         │  organizational → T01                  │  ← ✅ Triple match
-         │  administrative → T01                  │  ← ✅ Quadruple
-         └────────────────────────────────────────┘
-                        ↓ weighted aggregate
-              T01: 0.82 (confidence score)
-              → MHA recommended (primary degree)
+"wants to transition from clinical to administrative leadership"
+                    ↓ keyword extraction
+     ┌────────────────────────────────────────┐
+     │  leadership → T01 (Admin track)        │  ← ✅ Primary signal
+     │  quality improvement → T01             │  ← ✅ Reinforcing
+     │  organizational → T01                  │  ← ✅ Triple match
+     │  administrative → T01                  │  ← ✅ Quadruple
+     └────────────────────────────────────────┘
+                    ↓ weighted aggregate
+          T01: 0.82 (confidence score)
+          → MHA recommended (primary degree)
 ```
 
 This matters because **career transitions require explicit intent to override background signals** — a dentist who says "administrative leadership" should get MHA, not be penalized for lacking admin coursework.
@@ -68,7 +69,7 @@ This matters because **career transitions require explicit intent to override ba
 
 ## 🚀 Features
 
-- 🎯 **SOP Keyword Scoring** — Parses statement of purpose for track-specific keywords (11 tracks × 8-15 keywords each) with normalized scoring
+- 🎯 **SOP Keyword Scoring** — Parses statement of purpose for track-specific keywords (11 tracks x 8-15 keywords each) with normalized scoring
 - 💼 **Experience Pattern Matching** — Scans role descriptions for career track signals (e.g., "Deloitte" → Consulting, "FHIR" → Informatics)
 - 📚 **Academic Cluster Mapping** — Maps 10 subject clusters (Life Sciences, Policy, IT, etc.) to degree eligibility
 - ⚖️ **Weighted Signal Fusion** — 50% SOP + 30% Experience + 20% Academic clusters = explainable recommendations
@@ -215,15 +216,15 @@ print(result)
     {
       "rank": 1,
       "track_id": "T01",
-      "track_name": "Healthcare Administration, Operations, Quality & Risk",
+      "track_name": "Healthcare Administration, Operations, Quality and Risk",
       "score": 0.2429,
-      "rationale": "SOP keywords matched: 'leadership', 'quality improvement', 'organizational', 'administrative'. Academic background supports MHA (degree alignment score: 0.5)."
+      "rationale": "SOP keywords matched: leadership, quality improvement, organizational, administrative. Academic background supports MHA (degree alignment score: 0.5)."
     }
   ]
 }
 ```
 
-### Claim/Label Reference
+### Track Reference
 
 | Track ID | Label | Primary Degree |
 |----------|-------|----------------|
@@ -244,9 +245,9 @@ print(result)
 ## 🔬 Pipeline — Deep Dive
 
 ```
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                           CARA CLASSIFICATION PIPELINE                       │
-└──────────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                  CARA CLASSIFICATION PIPELINE                   │
+└─────────────────────────────────────────────────────────────────┘
 
     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
     │  CANDIDATE  │     │  CANDIDATE  │     │  CANDIDATE  │
@@ -254,58 +255,58 @@ print(result)
     └──────┬──────┘     └──────┬──────┘     └──────┬──────┘
            │                   │                   │
            ▼                   ▼                   ▼
-    ┌─────────────────────────────────────────────────────────┐
-    │              score_clusters()                           │
-    │   subjects → lowercase → match against 10 clusters      │
-    │   each match → +1 to cluster's supported degrees        │
-    │   normalize → max_score = 1.0                           │
-    └─────────────────────────────────────────────────────────┘
+    ┌──────────────────────────────────────────────────────┐
+    │              score_clusters()                        │
+    │   subjects → lowercase → match against 10 clusters   │
+    │   each match → +1 to cluster supported degrees       │
+    │   normalize → max_score = 1.0                        │
+    └──────────────────────────────────────────────────────┘
            │
            ▼
-    ┌─────────────────────────────────────────────────────────┐
-    │              score_sop()                                │
-    │   SOP → lowercase → match against 11 track keywords     │
-    │   score = hits / total_keywords_per_track               │
-    │   returns: {track_scores, matched_keywords}             │
-    └─────────────────────────────────────────────────────────┘
+    ┌──────────────────────────────────────────────────────┐
+    │              score_sop()                             │
+    │   SOP → lowercase → match against 11 track keywords  │
+    │   score = hits / total_keywords_per_track            │
+    │   returns: {track_scores, matched_keywords}          │
+    └──────────────────────────────────────────────────────┘
            │
            ▼
-    ┌─────────────────────────────────────────────────────────┐
-    │              score_experience()                         │
-    │   roles → join → lowercase → match experience keywords  │
-    │   score = hits / total_keywords_per_track               │
-    │   returns: {track_scores, matched_keywords}             │
-    └─────────────────────────────────────────────────────────┘
+    ┌──────────────────────────────────────────────────────┐
+    │              score_experience()                      │
+    │   roles → join → lowercase → match exp keywords      │
+    │   score = hits / total_keywords_per_track            │
+    │   returns: {track_scores, matched_keywords}          │
+    └──────────────────────────────────────────────────────┘
            │
            ▼
-    ┌─────────────────────────────────────────────────────────┐
-    │              COMBINE SIGNALS                            │
-    │   final[T] = sop[T]×0.50 + exp[T]×0.30 + deg[T]×0.20   │
-    │   deg[T] = cluster_score[track.primary_degree]          │
-    └─────────────────────────────────────────────────────────┘
+    ┌──────────────────────────────────────────────────────┐
+    │              COMBINE SIGNALS                         │
+    │   final[T] = sop[T]*0.50 + exp[T]*0.30 + deg[T]*0.20│
+    │   deg[T] = cluster_score[track.primary_degree]       │
+    └──────────────────────────────────────────────────────┘
            │
            ▼
-    ┌─────────────────────────────────────────────────────────┐
-    │              RANK & SELECT TOP 3                        │
-    │   sort by final_score descending                        │
-    │   take top 3 track IDs                                  │
-    │   build rationales from matched keywords                │
-    └─────────────────────────────────────────────────────────┘
+    ┌──────────────────────────────────────────────────────┐
+    │              RANK AND SELECT TOP 3                   │
+    │   sort by final_score descending                     │
+    │   take top 3 track IDs                               │
+    │   build rationales from matched keywords             │
+    └──────────────────────────────────────────────────────┘
            │
            ▼
-    ┌─────────────────────────────────────────────────────────┐
-    │              score_degree_from_tracks()                 │
-    │   rank_weights = [1.0, 0.5, 0.25] for top 3             │
-    │   add cluster_degree_scores × 0.1                       │
-    │   return max(degree_votes)                              │
-    └─────────────────────────────────────────────────────────┘
+    ┌──────────────────────────────────────────────────────┐
+    │              score_degree_from_tracks()              │
+    │   rank_weights = [1.0, 0.5, 0.25] for top 3          │
+    │   add cluster_degree_scores x 0.1                    │
+    │   return max(degree_votes)                           │
+    └──────────────────────────────────────────────────────┘
            │
            ▼
-    ┌─────────────────────────────────────────────────────────┐
-    │              OUTPUT                                     │
-    │   { candidate_id, recommended_degree,                   │
-    │     degree_rationale, top_3_tracks: [...] }             │
-    └─────────────────────────────────────────────────────────┘
+    ┌──────────────────────────────────────────────────────┐
+    │              OUTPUT                                  │
+    │   { candidate_id, recommended_degree,                │
+    │     degree_rationale, top_3_tracks: [...] }          │
+    └──────────────────────────────────────────────────────┘
 ```
 
 ### Aggregation Rules
@@ -372,7 +373,7 @@ DEGREE_WEIGHT = 0.20     # Academic background
 | SOP_WEIGHT | 0.50 | Higher = intent matters more than background |
 | EXP_WEIGHT | 0.30 | Higher = work history weighted more heavily |
 | DEGREE_WEIGHT | 0.20 | Higher = academic clusters more influential |
-| rank_weights | [1.0, 0.5, 0.25] | Top track's degree gets strongest vote |
+| rank_weights | [1.0, 0.5, 0.25] | Top track degree gets strongest vote |
 
 ---
 
@@ -411,8 +412,7 @@ DEGREE_WEIGHT = 0.20     # Academic background
 ## 🤝 Contributing
 
 ```bash
-# 1. Fork the repo
-git fork https://github.com/hrshjha/cara-classifier
+# 1. Fork the repo on GitHub
 
 # 2. Clone your fork
 git clone https://github.com/YOUR_USERNAME/cara-classifier
@@ -420,15 +420,14 @@ git clone https://github.com/YOUR_USERNAME/cara-classifier
 # 3. Create feature branch
 git checkout -b feature/add-new-track
 
-# 4. Make changes + test
+# 4. Make changes and test
 python classifier.py  # Verify all 6 candidates still classify correctly
 
 # 5. Commit with conventional commits
 git commit -m "feat: add T12 track for Medical Education"
 
-# 6. Push + open PR
+# 6. Push and open PR
 git push origin feature/add-new-track
-# Then open PR at github.com/hrshjha/cara-classifier/pulls
 ```
 
 **Contribution standards:**
@@ -438,16 +437,12 @@ git push origin feature/add-new-track
 - ✅ Document rationale for keyword choices in PR description
 - ✅ Run `python classifier.py` and verify no regressions
 
-**All PRs welcome** — whether you're fixing a typo or adding a new career track.
-
 ---
 
 ## 📜 License
 
 ```
-MIT License
-
-Copyright (c) 2026 hrshjha
+MIT License — Copyright (c) 2026 hrshjha
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -461,11 +456,7 @@ copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 ```
 
 ---
@@ -501,9 +492,9 @@ SOFTWARE.
   </tr>
 </table>
 
-[![Star](https://img.shields.io/badge/⭐_Star_this_Repo-black?style=for-the-badge)](https://github.com/hrshjha/cara-classifier)
-[![Fork](https://img.shields.io/badge/🍴_Fork-black?style=for-the-badge&color=blue)](https://github.com/hrshjha/cara-classifier/fork)
-[![Issue](https://img.shields.io/badge/🐛_Report_Issue-black?style=for-the-badge&color=orange)](https://github.com/hrshjha/cara-classifier/issues)
+[![Star](https://img.shields.io/badge/Star_this_Repo-f59e0b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hrshjha/cara-classifier)
+[![Fork](https://img.shields.io/badge/Fork_it-6366f1?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hrshjha/cara-classifier/fork)
+[![Issue](https://img.shields.io/badge/Report_Issue-22c55e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hrshjha/cara-classifier/issues)
 
 </div>
 
@@ -521,3 +512,5 @@ SOFTWARE.
 [![Twitter](https://img.shields.io/twitter/follow/hrshjha?style=social)](https://twitter.com/hrshjha)
 
 </div>
+````
+
