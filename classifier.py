@@ -1,4 +1,3 @@
-# classifier.py — Main runner for CARA classifier
 
 import json
 import os
