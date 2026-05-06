@@ -1,4 +1,3 @@
-# framework.py — All constants for the CARA classifier
 
 CLUSTERS = {
     "C1": {
