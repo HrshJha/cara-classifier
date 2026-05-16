@@ -1,4 +1,3 @@
-# scorer.py — Scoring engine for CARA classifier
 
 from framework import CLUSTERS, DEGREES, TRACKS
 
@@ -20,7 +19,6 @@ def score_clusters(subjects):
             for degree in cluster["degrees"]:
                 degree_scores[degree] += 1
 
-    # Normalize to 0-1
     max_score = max(degree_scores.values()) if max(degree_scores.values()) > 0 else 1
     return {d: round(v / max_score, 4) for d, v in degree_scores.items()}
 
@@ -77,14 +75,12 @@ def score_degree_from_tracks(top_tracks, cluster_degree_scores):
     """
     degree_votes = {d: 0.0 for d in DEGREES}
 
-    # Top track gets highest weight, rank 3 gets lowest
-    # Weights are designed so the top track's primary degree dominates
+
     rank_weights = [1.0, 0.5, 0.25]
     for i, track in enumerate(top_tracks):
         primary = TRACKS[track["track_id"]]["primary_degree"]
         degree_votes[primary] += rank_weights[i]
 
-    # Blend with cluster academic scores (smaller weight - background is secondary)
     for degree, score in cluster_degree_scores.items():
         degree_votes[degree] += score * 0.1
 
@@ -106,20 +102,16 @@ def classify(candidate):
     print(f"Classifying: {cid}")
     print(f"{'='*60}")
 
-    # --- Signal 1: Academic cluster scoring ---
     cluster_degree_scores = score_clusters(candidate.get("subjects", []))
     print(f"  [Cluster Scores] {cluster_degree_scores}")
 
-    # --- Signal 2: SOP scoring ---
     sop_track_scores, sop_keywords_fired = score_sop(candidate.get("sop", ""))
     print(f"  [Top SOP Tracks] {sorted(sop_track_scores.items(), key=lambda x: -x[1])[:3]}")
 
-    # --- Signal 3: Experience scoring ---
     exp_track_scores, exp_keywords_fired = score_experience(candidate.get("experience_roles", []))
     print(f"  [Top Exp Tracks] {sorted(exp_track_scores.items(), key=lambda x: -x[1])[:3]}")
 
-    # --- Degree alignment bonus: map cluster degree scores to tracks ---
-    # Normalize cluster degree scores
+
     max_cds = max(cluster_degree_scores.values()) if max(cluster_degree_scores.values()) > 0 else 1
     norm_cluster = {d: v / max_cds for d, v in cluster_degree_scores.items()}
 
@@ -128,7 +120,6 @@ def classify(candidate):
         primary = track["primary_degree"]
         degree_alignment_bonus[track_id] = norm_cluster.get(primary, 0)
 
-    # --- Combine all signals ---
     final_scores = {}
     for track_id in TRACKS:
         final_scores[track_id] = round(
@@ -138,11 +129,9 @@ def classify(candidate):
             4
         )
 
-    # --- Rank and pick top 3 ---
     ranked = sorted(final_scores.items(), key=lambda x: -x[1])
     top_3_ids = [r[0] for r in ranked[:3]]
 
-    # --- Build top 3 track output with specific rationales ---
     top_3_tracks = []
     for rank_idx, track_id in enumerate(top_3_ids, 1):
         track = TRACKS[track_id]
@@ -167,7 +156,6 @@ def classify(candidate):
             "rationale": ". ".join(rationale_parts) + "."
         })
 
-    # --- Determine recommended degree ---
     recommended_degree = score_degree_from_tracks(top_3_tracks, cluster_degree_scores)
     print(f"  [Recommended Degree] {recommended_degree}")
     print(f"  [Top 3 Tracks] {[t['track_id'] for t in top_3_tracks]}")
